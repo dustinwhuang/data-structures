@@ -5,9 +5,7 @@ var Stack = function() {
 
   storage.length = 0;
 
-  storage.push = stackMethods.push;
-  storage.pop = stackMethods.pop;
-  storage.size = stackMethods.size;
+  _.extend(storage, stackMethods);
 
   return storage;
 };

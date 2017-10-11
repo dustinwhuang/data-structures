@@ -6,9 +6,7 @@ var Queue = function() {
   storage.length = 0;
   storage.head = 0;
 
-  storage.enqueue = queueMethods.enqueue;
-  storage.dequeue = queueMethods.dequeue;
-  storage.size = queueMethods.size;
+  _.extend(storage, queueMethods);
 
   return storage;
 };
