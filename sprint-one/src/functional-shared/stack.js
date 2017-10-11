@@ -24,8 +24,8 @@ stackMethods.pop = function () {
     this.length--;
     return this[this.length];
   }
-}
+};
 
 stackMethods.size = function () {
   return this.length;
-}
+};
