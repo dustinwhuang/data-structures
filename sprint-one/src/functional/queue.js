@@ -17,7 +17,10 @@ var Queue = function() {
   someInstance.dequeue = function() {
     if (storage.length > 0) {
       storage.length--;
-      return storage[storage.head++];
+      var value = storage[storage.head];
+      delete storage[storage.head];
+      storage.head++;
+      return value;
     }
   };
 

@@ -20,7 +20,9 @@ stackMethods.push = function (value) {
 stackMethods.pop = function () {
   if (this.length > 0) { 
     this.length--;
-    return this[this.length];
+    var value = this[this.length];
+    delete this[this.length];
+    return value;
   }
 };
 

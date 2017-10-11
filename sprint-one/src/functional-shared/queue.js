@@ -21,7 +21,10 @@ queueMethods.enqueue = function (value) {
 queueMethods.dequeue = function () {
   if (this.length > 0) { 
     this.length--;
-    return this[this.head++];
+    var value =  this[this.head];
+    delete this[this.head];
+    this.head++;
+    return value;
   }
 };
 
